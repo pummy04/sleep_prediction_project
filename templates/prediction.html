@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health and Sleep Statistics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_789683_455412003877430549683-125x110.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p, .section-title {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #fff;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction-form {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .prediction-form h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .prediction-form input[type="text"],
+        .prediction-form input[type="number"],
+        .prediction-form select,
+        .prediction-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .prediction-form input[type="text"],
+        .prediction-form input[type="number"] {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .prediction-form select {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .prediction-form button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .prediction-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Health and Sleep Statistics</h1>
+        <p>Getting quality sleep is crucial for maintaining overall health and well-being. Sleep affects your mood, cognitive function, and physical health. Understanding your sleep patterns and factors influencing them can help you make better lifestyle choices.</p>
+        <hr>
+        <p class="section-title">Project Overview:</p>
+        <p>This project analyzes health and sleep data to reveal insights and trends. By examining this dataset, you can learn how different variables affect sleep quality and health.</p>
+        
+        <h2>Prediction Form</h2>
+    <form action="/prediction" method="POST">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        <label for="sleep_hours">Sleep Hours:</label>
+        <input type="text" id="sleep_hours" name="sleep_hours" required><br><br>
+        <label for="exercise">Exercise (yes/no):</label>
+        <input type="text" id="exercise" name="exercise" required><br><br>
+        <label for="diet">Diet (poor/average/good):</label>
+        <input type="text" id="diet" name="diet" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+                
+        </div>
+
+        <a href="/about" class="button">About Me</a>
+        <a href="/thank_you" class="button">Thank You</a>
+    </div>
+</body>
+</html>
+
+
+   
+
+
